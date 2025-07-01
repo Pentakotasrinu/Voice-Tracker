@@ -1,0 +1,68 @@
+/* Charts Section Layout */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+/* Chart Card */
+.chart-card {
+  background-color: #ffffff;
+  background: linear-gradient(135deg, #06090c, #3a4c71);  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 192, 255, 0.25);
+}
+
+
+/* Chart Title */
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  height: 400px;
+
+  /* Center Chart Properly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+}

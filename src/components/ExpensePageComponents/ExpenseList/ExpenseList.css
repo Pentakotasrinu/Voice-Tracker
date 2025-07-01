@@ -1,0 +1,37 @@
+.expense-list-page-container {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .expense-list-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .expense-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .expense-table thead {
+    background-color: #f3f4f6;
+  }
+  
+  .expense-table th,
+  .expense-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .expense-table td {
+    color: #111827;
+  }
+  
+  .expense-empty {
+    color: #6b7280;
+  }
+  

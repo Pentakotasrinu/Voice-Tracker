@@ -1,0 +1,164 @@
+/* Container Styles */
+.voice-input-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #06090c, #3a4c71); /* Dark luxury background */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: #ecf0f1;
+}
+
+/* Instructions Panel */
+.instructions-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.instructions-container h2 {
+  margin: 0 0 15px;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+}
+
+.instructions-container p,
+.instructions-container ol {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.instructions-container ol li {
+  margin-bottom: 6px;
+}
+
+/* Voice Button Container */
+.voice-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Main Voice Input Button */
+.voice-input-button {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(145deg, #0072ff, #00c6ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.voice-input-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 194, 255, 0.5);
+  filter: brightness(1.1);
+}
+
+.voice-input-button.recording {
+  background: linear-gradient(145deg, #ff4b2b, #c31432);
+  animation: pulse 1.5s infinite;
+}
+
+/* Stop Button */
+.stop-button {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(145deg, #e74c3c, #ff7675);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.stop-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Transcript Paragraph */
+.voice-transcript {
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.voice-transcript:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Popup Notification */
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(52, 152, 219, 0.9);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInOut 4s ease forwards;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 82, 82, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.5);
+  }
+}

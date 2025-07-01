@@ -1,0 +1,82 @@
+.income-list-wrapper {
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.income-list-heading {
+  font-size: 1.8rem;
+  color: #2a2a72;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.income-list-empty {
+  color: #888;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.income-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.income-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.income-table-header {
+  background-color: #2a2a72;
+  color: #ffffff;
+}
+
+.income-table th,
+.income-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 1rem;
+}
+
+.income-table-row:hover {
+  background-color: #f6f9ff;
+}
+
+.income-total-row td {
+  background-color: #f0f4ff;
+  font-weight: bold;
+  color: #2a2a72;
+  border-top: 2px solid #d0d0ff;
+}
+
+/* Scroll bar for table */
+.income-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.income-table-wrapper::-webkit-scrollbar-thumb {
+  background: #a0a0ff;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .income-table th,
+  .income-table td {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .income-list-heading {
+    font-size: 1.5rem;
+  }
+}

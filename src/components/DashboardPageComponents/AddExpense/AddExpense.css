@@ -1,0 +1,219 @@
+/* Wrapper for both AddIncome and AddExpense sections */
+.forms-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  background: #1c2526; /* Neutral dark gray */
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Main container for AddIncome and AddExpense */
+.add-income-container, .add-expense-container {
+  flex: 1;
+  min-width: 48%;
+  background: linear-gradient(135deg, #06090c, #3a4c71); /* Dark gradient */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.15);
+  border: 1px solid transparent;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form Hover Effect */
+.add-income-container:hover, .add-expense-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+/* Form Load Animation */
+.animate-form {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.expense-form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff; /* Bright white */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-shadow: 0 0 6px rgba(0, 212, 255, 0.4); /* Cyan glow */
+}
+
+/* Voice Hint */
+.voice-hint {
+  color: #d4a017; /* Gold */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.voice-hint:hover {
+  color: #f1c40f; /* Brighter gold */
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(241, 196, 15, 0.6);
+}
+
+/* Input fields and select */
+.add-income-input, .add-expense-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.4); /* Subtle cyan */
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #000000; /* Light gray */
+  background: #2c3e50; /* Darker base */
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.add-income-input:focus, .add-expense-input:focus {
+  border: 1px solid transparent;
+  background: linear-gradient(#e6faff, #e6faff) padding-box, /* Light cyan */
+              linear-gradient(45deg, #1e3c72, #00d4ff) border-box;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* Cyan glow */
+  transform: scale(1.01);
+}
+
+/* Input Load Animation */
+.animate-input {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: slideInInput 0.5s ease-out forwards;
+}
+
+.animate-input:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.animate-input:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.animate-input:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.animate-input:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideInInput {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Buttons */
+.add-income-button, .add-expense-button {
+  width: 100%;
+  background: linear-gradient(90deg, #27ae60, #00d4ff); /* Green to cyan */
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.add-income-button:hover, .add-expense-button:hover {
+  background: linear-gradient(90deg, #00d4ff, #27ae60); /* Cyan to green */
+  transform: scale(1.05);
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.6); /* Cyan glow */
+}
+
+/* Button Load Animation */
+.animate-btn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInBtn 0.6s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInBtn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Disabled state for buttons */
+.add-income-button:disabled, .add-expense-button:disabled {
+  background: linear-gradient(90deg, #95a5a6, #7f8c8d); /* Muted gray */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .forms-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-income-container, .add-expense-container {
+    width: 90%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-income-container, .add-expense-container {
+    padding: 16px;
+  }
+
+  .expense-form-title {
+    font-size: 1.3rem;
+  }
+
+  .add-income-input, .add-expense-input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .add-income-button, .add-expense-button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+
+/* Success Message */
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}

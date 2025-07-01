@@ -1,0 +1,274 @@
+/* Container for both forms */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: #1c2526; /* Neutral dark gray */
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Form Styles */
+  .income-form, .expense-form {
+    flex-grow: 1;
+    min-width: 48%;
+    max-width: 100%;
+    background: linear-gradient(135deg, #06090c, #3a4c71); /* Dark gradient */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.15);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #ecf0f1; /* Light gray for text */
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Form Hover Effect */
+  .income-form:hover, .expense-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+  }
+  
+  /* Form Load Animation */
+  .animate-form {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Form Title */
+  .income-form-title, .expense-form-title {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff; /* Bright white */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-shadow: 0 0 6px rgba(0, 212, 255, 0.4); /* Cyan glow */
+  }
+  
+  /* Voice Hint */
+  .voice-hint {
+    color: #d4a017; /* Gold */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .voice-hint:hover {
+    color: #f1c40f; /* Brighter gold */
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.6);
+  }
+  
+  /* Input Fields */
+  .income-input, .expense-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.4); /* Subtle cyan */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #000000; /* Light gray */
+    background: #2c3e50; /* Darker base */
+    transition: all 0.3s ease;
+  }
+  
+  /* Input Focus and Animation */
+  .income-input:focus, .expense-input:focus {
+    border: 1px solid transparent;
+    background: linear-gradient(#e6faff, #e6faff) padding-box, /* Light cyan */
+                linear-gradient(45deg, #1e3c72, #00d4ff) border-box;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* Cyan glow */
+    transform: scale(1.01);
+  }
+  
+  /* Input Load Animation */
+  .animate-input {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideInInput 0.5s ease-out forwards;
+  }
+  
+  .animate-input:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-input:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-input:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes slideInInput {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Submit Button */
+  .income-submit-btn, .expense-submit-btn {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #27ae60, #00d4ff); /* Green to cyan */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .income-submit-btn:hover, .expense-submit-btn:hover {
+    background: linear-gradient(90deg, #00d4ff, #27ae60); /* Cyan to green */
+    transform: scale(1.05);
+    box-shadow: 0 0 14px rgba(0, 212, 255, 0.6); /* Strong cyan glow */
+  }
+  
+  /* Button Load Animation */
+  .animate-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInBtn 0.6s ease-out 0.4s forwards;
+  }
+  
+  @keyframes fadeInBtn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Disabled Button */
+  .income-submit-btn:disabled, .expense-submit-btn:disabled {
+    background: linear-gradient(90deg, #95a5a6, #7f8c8d); /* Muted gray */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Responsive: Stack forms vertically on smaller screens */
+  @media (max-width: 900px) {
+    .form-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .income-form, .expense-form {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .income-form, .expense-form {
+      padding: 16px;
+    }
+  
+    .income-form-title, .expense-form-title {
+      font-size: 20px;
+    }
+  
+    .income-input, .expense-input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .income-submit-btn, .expense-submit-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+
+/* Modal for confirmation */
+.delete-confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.modal-actions button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: green;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: red;
+  color: white;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999;
+  font-size: 16px;
+}
+
+
+/* Success Message */
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}

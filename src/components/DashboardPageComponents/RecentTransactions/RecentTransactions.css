@@ -1,0 +1,77 @@
+/* RecentTransactions.css */
+
+/* Container Styling */
+.transactions-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .transactions-container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title */
+  .transactions-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  /* Transaction List */
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  
+  .transaction-item:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-2px);
+  }
+  
+  /* Merchant Name */
+  .transaction-merchant {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Transaction Date */
+  .transaction-date {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  /* Amount */
+  .transaction-amount {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1rem;
+  }
+  
+  /* Category */
+  .transaction-category {
+    font-size: 0.875rem;
+    color: #888;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .transaction-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+    }
+  
+    .transaction-amount {
+      margin-top: 4px;
+    }
+  }
+  

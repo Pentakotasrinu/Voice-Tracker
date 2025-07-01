@@ -1,0 +1,13 @@
+.expenses-page-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8fafc;
+    background: linear-gradient(135deg, #06090c, #3a4c71);  
+  }
+  
+  .expenses-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  

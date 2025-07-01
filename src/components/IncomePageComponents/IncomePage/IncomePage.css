@@ -1,0 +1,35 @@
+.income-page-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f2f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .income-content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #ffffff;
+    background: linear-gradient(135deg, #06090c, #3a4c71);  
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.03);
+    overflow-y: auto;
+  }
+  
+  /* Heading */
+  .income-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d3c2c2;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive stacking on smaller screens */
+  @media (max-width: 768px) {
+    .income-page-container {
+      flex-direction: column;
+    }
+  
+    .income-content {
+      padding: 1rem;
+    }
+  }
+  

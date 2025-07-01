@@ -1,0 +1,62 @@
+/* Base container - minimal styling to avoid affecting Navbar */
+.ai-assistant-page {
+  min-height: 100vh; /* Allow content to expand beyond viewport if needed */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Content wrapper for page-specific styling */
+.ai-assistant-content {
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  flex-grow: 1; /* Take remaining space after Navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Page title styling with red neon glow */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff2c2c;
+  text-align: center;
+  margin: 10px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 
+    0 0 5px #ff2c2c,
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff1a1a,
+    0 0 40px #ff1a1a;
+}
+
+.page-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #ff2c2c;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 10px;
+}
+
+/* Wrapper for the chat interface */
+.chat-interface-container {
+  height: 75vh;
+  width: 100%;
+  background: #111;
+  border: 2px solid #ff2c2c;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* On hover - subtle upscale for smooth UX */
+.chat-interface-container:hover {
+  transform: scale(1.005);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+}
